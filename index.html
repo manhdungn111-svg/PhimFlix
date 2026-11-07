@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d0a06">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="PhimFlix">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAL10lEQVR42u2de3BU1R3Hf+eceze72SS7mychCREEEW1VrKhVKyKijlgQQeQ5FA3go7aA8oiIdKY4tv/UfzqMj47jWMdRq87Y1vEP8YmiGBDFqpWHCChvkmx2k2z2nnN+/WOBQmvkYQK7d7+fyTCZyT/cm9/9Ps45uSt46ywC4PuQuAWgOxwixl0A3QwHZgPAVgBsBcBWAJQDQDkAAimArQDYCoByAGQOAGArALYCYCugV20FygGgHADDAWArAMoBoBwAygFySzmwCAa6txXcBABbAbAVAFsBUA6AzAFgKwC2AqAcAMoBEEgBgK0A2AqArYDetBUoB4ByAGQOgLYCYCsAgRRAOQACKUAgBbAVAFvxC8zEzEQkhBACv2LYyqGxsJaVI0TAIUGkrfGsIJISM5LfysGWhSNVScBr6dqxI5nWtro8GKkqJG1Nh1YK83Eyw+EHrGEZchJt6Uce++Kf7+zatbdTG1saCfz8/PK50wf9ZGg5xdPGMEbkhBC89iY/aEZQ7d6fmjh39YeftUaKpOtKQaQNJztMaYnb2DBk9sQBTqFjEx7BZU5kOMbmes4gJZIp88s7V639srUiFvC0zaz6CkFKCk9zPKEvPS/WOHvINVdWk2HToaVEVj026nezzs7pCzCGVYn75ye/euof3/YpD6Q9e5TdMElJRYVq2+6O517bsenrxLkDSsprw8Jjo1liQI6hHE1jclg2Dv07ouHdz7e0hQqU7WarKGMlrQkvWuTeeeuA30wbVBQrsIk0MVymW3J7EYyZhCv37k99u6fTdSV3v4loLVvLsRLXWH7oia+Gz3j7+Ve+kSFHhh1jGJuP3a1z5PKNYSJmbayxx3UVxrCUVB51t+/uaHhw3XOv7bi/4exhw8qp05iUkQo24yPlEIJI26pYQVVpwPPs8YRMZtKGgwEVi7hvrtk7+u73Fixfv3NfSkUDgsgYaIhfhuNgqJbiRBcwLLMxHClyA65c8fzWETPfefyZzWkiVeJmDAiTQf447MN8kqEhY0blUTee9Ob9ccOzr25fOmfIyF9UkWdNp0Hdxa4sacOOI8pj7oZN8QnzP/zVwo82bUuqWEAokecu44+9Ff6/b0649WjD4ZBDRC+t3PlW076G8f3nTj2zuLSA2zxmlnm57i6JyQ9fPUEmbZRGXE/zw3/ZeHXDqudf2SYKpAw7RjNb8sm9Ou4v2Mr3uIyUVBFzv9nZcfuy9TfPXbN2Q7OKuMLNO5fxxelz5p71xsN1tzCo3mjau+rj/TPG9FswY2BVTZgSnrGs8mNRFcrxQ3VXG46E3YIC+ejfvrnytvce/etmI4Uqck1+1F1JCB3HqrvMVBZ1W5PefX/6/Jo577/+7m5V7MigNJmf+Td0IJAebxBxHVEWdT/dFJ+4sOm2xnUbtyZVNCCkMJr9Oh4+q7K9G2wO190XXt+5cs2+O2/pf9fEMyJlBZzw+ODuLvvMVsAJ192yiKsN//6JjVfPev/FV3eIAikLlTHWZ7u7sJWTrbuCKmLu9j2dM5d9MnbuR+v+1aoirnB85TIIpCfvZNpwMCBjEfftdQdu+PWH8x7asLu5S8VcIjbG+iKQgh9Vd8kYjoQd1xWPv7x9xOzVK57eogWpYteanK+7flkEI6LTty51eHe3uc2775EvX1q5a9HMgddeUUmaTWcOH2aGcvRw3a2Iues3xicuWnv70vWbtiVVNId3dzEcvVJ3i8PuCyt3XX3HBw+v+CqZMgfPEOXaiPjGVrLoKjJRI1bias3Ln9z84hu7Fs04c+J1fUmQac8ll4Fy9FoQMSwFlUfd7Xs6G5ZvGDe/qemzFhUNCFcakxtPpI8CaRb+vw7V3VBQvbm2efWGtdNvqLl3av/qukJKeMZk++4ulONU1d0ix3XFipe2j7hjzWPPbk0zqaJsP8yM4Th1dZeZKqJua9Kb98i/r7un6Y3V+2TYkUGlDWfnn1XBVk513XUcURF1P92cmLDo47HDK5fcNnDQoGLq0DZts+0PMx0806ep7ioievHNPe+ubxk7vGr+pPq62kKTzK6XzGBv5bTV3cxh5lTaPvryjlH3NH32ZVwVKWstDvvk+WwcVXerSgP74t6Exk+2bmsXAWUNTp+DQ3XX07akUG3f1/WHp74WAcFZM+w4CZYVeIajYfXW+pYDOzvLygLscTasojo+mY0cvwpmcpRsbvO2fNdZVhW0XTob1segHNk1Iua/gRTKgdkgIiIhyLAtCTv1lUHSLElkw0VBObICJUU8YS6/ONq3NmQ6jMqOnoC2kgUPqBJpbYOuXDS1nig7RAO2cvofzcw7DpPaVeLpJedcdH7MJjwps2U8YCunLWQoKRIdRgq64rzIkulnXHZRqUmkVTb9ZRT2Vk6Pj3R5trlNXzS4eOnM/qMuLSMm2+Zl26vZcUzwVAdPy7w/7tWUF/xuZv+Zo6sLCh2b1EQkZdZtL0M5TlW8ECSlaE3qAkfOGdP33kn9aupClNAm6WXteTAMR+/HCyKlREfKpNJ25IWx+6fXX3xhjFLGtHpSimw+KYjDPr3sI0pozS1xb3BdaMHkfpOvrSIhTGtaSqEkEXE2+yGUo5drakKXFKrGqf1+e0ttcTTASc2cM58JBOXotZraaYzh8VeWN07rd9agImo3pi2tpBAyZ841Qjl6vqam0ra5Q18ypKRxat21l5WR4aPiRe48jBiOnq+pdRUFS2fUz7mx2i1UNqlJUI5+thxspWdqqpAintRBVzaM7rN4Sl11TYgS2iQO1dTcvMlQjp6oqV021WWuuiDy4Iz6YedHMjVVKZHrryvF3sqPihee4eZWb3BdqHFq3cQRFaSEiaelFEqRD24sdmVPsqYKouY2HQ2rB6bV3XVT32jpoZqaa6kTttLTNbXDWOYJw8sWTq4dclampnpKkc8+oAW2cmI+0uXZloQeNriocUrddZeXkj5UU9XpNDjYyg/ORi9fRaamHmjTfUvdpdPq5tzYxwkpm9CZH/luKqAcx11TpRTxdu0oMXt05cJJtX2qg5Q8cjfVt2/IR+Y4dk3tSJlRF0aWTKsb9tNi6rIm7ikp8uFTNXDYpxsfUUJrbm71zqkP3Tex76RMTW3TUlL276ZCOXqvphKRaEnoWJGzeHLN3JurS0oDnMil3VQE0l6rqZ2GLY27rPSBaTVnDQxTu8n4iBAi3+4VAun/1tSfDQovnVY76pLYEbupfk6dsJVj19T9cV1T5i6bXnv79ZWBkLLtmkgoldefOuynXdkT/kVKQUKIeLsOOPKO0ZXzJlTX1hxZUznPPTdPlePI3dSRQ0sWT6q59IISShkT96QSefLhjz4fDmYSjth7IL0vrh0ljlMElRTacktcD64NLrilz+SR5SSFiXtSUp77iL9shYmIjGVtjutVOFISEbUkdaRQLb61eu64PsVRh5PmiN1UlDe/KIcQRJqrom6fmLtld5fjdisemZqa7DTa0PjLS5dMqR40oJA6rGnTSgmf7aaiyh6MDlqzW+KMPK/4k60dRUE3rbm7mtqcMJcMDt8/qXrUxVGybOKeb07l9J6t5HgRFYJT9u4xlS9/0Lo37hUXKu+I+VCSmGh/m64rDzw4pXLW9RVuobJJQ77eTe2xZ4//PjTXr8FakoXq043t45dv2dXiRcMq84u3zO0py0wzRpYtvrVPdd8gJbWxpPDGmuMdjleG5v5FkDGswmrzttSyZ3au+iIZbzfMHArIIXWh+eMqx1xVSimru6xSCBf5NhwH9YNlgSQltn+b2vhdqsvjMyoD59aHKKhMu5YInSc1HBf45mIsEzHLAkmOJEFkmLqssYxFrTwNpEctYxCRELaLOaWJSAghBan8201Fle1+RMThbRYMxY9+2ADwv60A2AqArYAssBUoB4ByAARSgEAKYCsAgRRAOQAyB0BbAbAVAFsBALYCoBwAygEQSAFsBcBWAJQDIHMA2AqArQAAWwHHthUoB4ByACgHgHIADAeArQAoB8gt5cAiGOjeVnATAGwFwFYAbAVAOQAyB4CtANgKgHIAKAdAIAUAtgJgKwC2AnqN/wAvkCYwI4mjZgAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>PhimFlix – Xem phim</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.17/hls.min.js"></script>
+<style>
+:root{--bg:#0d0a06;--glass:rgba(255,255,255,.09);--glass2:rgba(255,255,255,.16);--line:rgba(255,255,255,.22);--tx:#f4f2ff;--mu:#b6b2d6;--ac:#ffd54a;--ac2:#ffa31a;--r:28px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--tx);font-family:'Be Vietnam Pro',system-ui,sans-serif}
+body{min-height:100vh;padding:env(safe-area-inset-top) 0 calc(86px + env(safe-area-inset-bottom))}
+.aurora{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55}
+.aurora i:nth-child(1){width:300px;height:300px;background:#ffb300;top:-80px;left:-80px}
+.aurora i:nth-child(2){width:260px;height:260px;background:#ff6a00;top:30%;right:-100px;opacity:.4}
+.aurora i:nth-child(3){width:280px;height:280px;background:#e0a800;bottom:-90px;left:10%;opacity:.35}
+.glass{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);border-radius:var(--r);box-shadow:0 8px 32px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.18)}
+header{position:sticky;top:0;z-index:20;padding:calc(10px + env(safe-area-inset-top)) 14px 10px;margin-top:calc(-1*env(safe-area-inset-top))}
+.bar{display:flex;gap:10px;align-items:center;padding:6px 6px 6px 16px}
+.logo{font-weight:800;font-size:21px;letter-spacing:-.6px;white-space:nowrap}
+.logo b{font-weight:800;background:linear-gradient(135deg,#ffe27a,#ffa31a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sw{display:flex;align-items:center;margin-left:auto;min-width:0}
+#q{width:0;opacity:0;padding:0;border:0;outline:0;background:transparent;color:var(--tx);font:inherit;font-size:15px;min-width:0;transition:width .25s,opacity .2s}
+#q::placeholder{color:var(--mu)}
+.bar.open .logo{display:none}.bar.open .sw{flex:1;margin-left:0}.bar.open #q{flex:1;width:100%;opacity:1;padding:8px 10px}
+.btn.ic{width:38px;height:38px;padding:0;display:flex;align-items:center;justify-content:center;border-radius:50%;flex:none}
+.btn{border:0;background:var(--glass2);color:var(--tx);border-radius:16px;padding:9px 14px;font:inherit;font-size:14px;font-weight:500;cursor:pointer}
+.btn:active{transform:scale(.96)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 14px 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--glass);color:var(--mu);border-radius:999px;padding:8px 15px;font:inherit;font-size:13.5px;cursor:pointer;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.chip.on{background:linear-gradient(135deg,rgba(255,213,74,.35),rgba(255,140,30,.3));color:#fff;border-color:rgba(255,255,255,.45);font-weight:700}
+h2{font-size:17px;margin:18px 16px 10px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:0 14px}
+@media(min-width:560px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{position:relative;overflow:hidden;border-radius:22px;aspect-ratio:2/3;cursor:pointer;border:1px solid var(--line);background:#2a2112}
+.card img{width:100%;height:100%;object-fit:cover;display:block}
+.card .cap{position:absolute;left:6px;right:6px;bottom:6px;padding:7px 10px;border-radius:16px;background:rgba(14,12,40,.5);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.card b{display:block;font-size:12.5px;line-height:1.25;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card small{color:var(--ac);font-size:11px}
+.more{display:block;margin:18px auto}
+.msg{text-align:center;color:var(--mu);padding:40px 24px;font-size:14px}
+.sk{animation:p 1.2s infinite alternate}@keyframes p{to{opacity:.45}}
+nav{position:fixed;left:14px;right:14px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;display:flex;padding:6px;gap:4px}
+nav button{flex:1;border:0;background:transparent;color:var(--mu);font:inherit;font-size:11px;padding:9px 0;border-radius:26px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+nav button svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+nav button.on{color:#fff;background:var(--glass2)}
+.view{display:none}.view.on{display:block}
+/* detail */
+#detail{position:fixed;inset:0;z-index:50;overflow-y:auto;background:var(--bg);display:none;padding-bottom:40px}
+#detail.on{display:block}
+.hero{position:relative;height:300px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,var(--bg))}
+.back{position:fixed;top:calc(12px + env(safe-area-inset-top));left:14px;z-index:60;width:42px;height:42px;padding:0;display:none;align-items:center;justify-content:center}
+#detail.on~.back{display:flex}
+.info{margin:-60px 14px 0;position:relative;z-index:2;padding:16px}
+.info h1{margin:0 0 4px;font-size:21px;line-height:1.25}
+.info .o{color:var(--ac);font-size:13px;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.tags span{background:var(--glass2);border-radius:999px;padding:4px 11px;font-size:12px}
+.desc{color:var(--mu);font-size:13.5px;line-height:1.6;max-height:5.1em;overflow:hidden}
+.desc.open{max-height:none}
+.player{margin:14px 14px 0;padding:6px;overflow:hidden}
+.player .box{aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center;color:var(--mu);font-size:13px;text-align:center}
+.player video,.player iframe{width:100%;height:100%;border:0;background:#000}
+.ptools{display:flex;gap:8px;padding:8px 4px 2px}
+.ptools .btn{flex:1;padding:8px 6px;font-size:13px}
+.ptools .btn.on{background:linear-gradient(135deg,rgba(255,213,74,.4),rgba(255,140,30,.35))}
+.eps{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px;padding:0 14px}
+.eps .chip{text-align:center;border-radius:16px;padding:9px 4px}
+.srv{display:flex;gap:8px;overflow-x:auto;padding:0 14px 10px;scrollbar-width:none}
+.toast{position:fixed;left:50%;top:80px;transform:translateX(-50%);z-index:99;padding:10px 16px;font-size:13px;display:none;max-width:88%;text-align:center}
+.gg{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:0 14px}
+.gtile{border:1px solid var(--line);color:var(--tx);font:inherit;font-weight:600;font-size:15px;padding:22px 10px;cursor:pointer;text-align:center}
+.gtile:active{transform:scale(.97)}
+.gtile:nth-child(3n+1){background-image:linear-gradient(135deg,rgba(255,213,74,.2),transparent)}
+.gtile:nth-child(3n+2){background-image:linear-gradient(135deg,rgba(255,140,30,.2),transparent)}
+.gtile:nth-child(3n){background-image:linear-gradient(135deg,rgba(255,190,60,.22),transparent)}
+.mecard{margin:14px 14px 0;padding:14px 16px}.mecard b{font-size:15px}.mecard p{margin:4px 0 12px;color:var(--mu);font-size:13px;line-height:1.5}
+.row{display:flex;flex-wrap:wrap;gap:8px}.btn.pri{background:linear-gradient(135deg,rgba(255,213,74,.45),rgba(255,140,30,.4));font-weight:700}
+#auth{position:fixed;inset:0;z-index:90;background:rgba(5,4,20,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px}
+#auth.on{display:flex}#auth .box{width:100%;max-width:360px;padding:18px}
+#auth input{width:100%;margin:6px 0;padding:12px 16px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:var(--tx);font:inherit;font-size:15px;outline:0}
+#auth .err{color:#ff9ab8;font-size:13px;min-height:20px}
+.bd{position:absolute;top:7px;padding:3px 8px;border-radius:999px;font-size:10.5px;font-weight:700;background:rgba(14,12,40,.5);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);max-width:48%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bd.q{left:7px;color:var(--ac)}.bd.l{right:7px;color:#ffe9a8}
+#v-home.sm #title,#v-home.sm #grid,#v-home.sm #more{display:none!important}
+#v-home:not(.sm) #shelves{display:none}
+.shh{display:flex;justify-content:space-between;align-items:center}
+.more2{background:none;border:0;color:var(--ac);font:inherit;font-size:12.5px;font-weight:500;cursor:pointer;padding:4px 0 4px 10px}
+.rail{display:flex;gap:10px;overflow-x:auto;padding:0 14px 6px;scroll-snap-type:x proximity;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail .card{flex:none;width:128px;scroll-snap-align:start}
+.frail{--fw:min(72vw,300px);display:flex;gap:14px;overflow-x:auto;padding:6px calc((100% - var(--fw))/2) 16px;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.frail::-webkit-scrollbar{display:none}
+.fcard{flex:none;width:var(--fw);scroll-snap-align:center;scroll-snap-stop:always;border-radius:32px;box-shadow:0 10px 26px rgba(0,0,0,.45);will-change:transform}
+.fcard .cap{left:10px;right:10px;bottom:10px;padding:11px 14px;border-radius:22px}
+.fcard .cap b{font-size:16px;-webkit-line-clamp:2}
+.fcard .cap small{font-size:12.5px}
+.fcard .bd{top:12px;font-size:12px;padding:4px 10px}.fcard .bd.q{left:12px}.fcard .bd.l{right:12px}
+header{position:fixed;top:0;left:0;right:0;margin:0;padding:calc(8px + env(safe-area-inset-top)) 12px 8px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:linear-gradient(rgba(13,10,6,.9),rgba(13,10,6,.55) 65%,transparent)}
+header:has(.bar.open) .logo{display:none}
+.bar.open{flex:1}
+.bar{padding:5px}
+.logo{cursor:pointer}
+body{padding-top:calc(env(safe-area-inset-top) + 64px)}
+nav.glass{border-radius:32px}
+.bar.glass{border-radius:28px}
+.toast.glass{border-radius:22px}
+.gtile.glass{border-radius:24px}
+.mecard.glass,.info.glass,.player.glass{border-radius:28px}
+#auth .box{border-radius:32px}
+@supports (corner-shape:squircle){*,*::before,*::after{corner-shape:squircle}}
+</style>
+</head>
+<body>
+<div class="aurora"><i></i><i></i><i></i></div>
+
+<header>
+  <span class="logo">Phim<b>Flix</b></span>
+  <div class="glass bar">
+    <div class="sw"><input id="q" type="search" placeholder="Tìm phim…" enterkeyhint="search"><button class="btn ic" id="go" aria-label="Tìm kiếm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
+  </div>
+</header>
+
+<main>
+  <section class="view on sm" id="v-home">
+    <div id="shelves"></div>
+    <h2 id="title">Mới cập nhật</h2>
+    <div class="grid" id="grid"></div>
+    <button class="btn glass more" id="more" style="display:none">Xem thêm</button>
+  </section>
+  <section class="view" id="v-genre">
+    <h2>Thể loại</h2>
+    <div class="gg" id="gg"></div>
+  </section>
+  <section class="view" id="v-me">
+    <div class="glass mecard" id="acc"></div>
+    <div class="glass mecard" id="inst" style="display:none"><b>Thêm PhimFlix vào màn hình chính</b><p></p><button class="btn pri" id="instBtn">Cài đặt</button></div>
+    <div class="glass mecard"><b>Nguồn phim (API)</b><p>Đổi nguồn nếu phim không tải được hoặc thiếu tập.</p><div class="chips" id="meSrc" style="padding:0"></div></div>
+    <h2>Yêu thích</h2>
+    <div class="grid" id="fgrid"></div>
+    <h2>Xem gần đây <button class="btn" id="clr" style="float:right;font-size:12px;padding:5px 10px;margin-top:-4px">Xoá</button></h2>
+    <div class="grid" id="hgrid"></div>
+  </section>
+</main>
+
+<nav class="glass">
+  <button data-t="home" class="on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Trang chủ</button>
+  <button data-t="bo"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Phim bộ</button>
+  <button data-t="le"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>Phim lẻ</button>
+  <button data-t="genre"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg>Thể loại</button>
+  <button data-t="me"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Cá nhân</button>
+</nav>
+
+<div id="detail"></div>
+<button class="btn glass back" id="back" aria-label="Quay lại"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<div class="glass toast" id="toast"></div>
+<input type="file" id="imp" accept=".json,application/json" hidden>
+<div id="auth"><div class="glass box">
+  <div class="chips" style="padding:0 0 8px"><button class="chip on" data-m="in">Đăng nhập</button><button class="chip" data-m="up">Đăng ký</button></div>
+  <input id="au" placeholder="Tên đăng nhập" autocomplete="username" autocapitalize="none">
+  <input id="ap" type="password" placeholder="Mật khẩu" autocomplete="current-password">
+  <input id="ap2" type="password" placeholder="Nhập lại mật khẩu" autocomplete="new-password" style="display:none">
+  <div class="err" id="aerr"></div>
+  <div class="row"><button class="btn pri" id="asub" style="flex:1">Đăng nhập</button><button class="btn" id="acan">Đóng</button></div>
+</div></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const strip=h=>String(h||'').replace(/<[^>]*>/g,'').trim();
+const abs=(u,base)=>!u?'':/^https?:/.test(u)?u:(base||'')+u.replace(/^\//,'');
+
+/* ---------- 3 nguồn API ---------- */
+const SRC={
+ kk:{name:'KKPhim',
+  list:(t,p)=>t==='new'?`https://phimapi.com/danh-sach/phim-moi-cap-nhat-v3?page=${p}`:`https://phimapi.com/v1/api/danh-sach/${t}?page=${p}&limit=24`,
+  search:(k,p)=>`https://phimapi.com/v1/api/tim-kiem?keyword=${encodeURIComponent(k)}&page=${p}&limit=24`,
+  detail:s=>`https://phimapi.com/phim/${s}`,
+  items(r){const d=r.data||r;const base=d.APP_DOMAIN_CDN_IMAGE||'https://phimimg.com';return(d.items||[]).map(m=>({slug:m.slug,name:m.name,sub:m.episode_current||m.year||'',ep:m.episode_current||'',q:m.quality||'',lang:m.lang||'',img:abs(m.thumb_url||m.poster_url,base+'/')}))},
+  det(r){const m=r.movie||{};return{name:m.name,origin:m.origin_name,desc:strip(m.content),img:abs(m.poster_url||m.thumb_url,'https://phimimg.com/'),tags:[m.year,m.quality,m.lang,m.episode_current,m.time].filter(Boolean),servers:(r.episodes||[]).map(s=>({name:s.server_name,eps:(s.server_data||[]).map(e=>({n:e.name,m3u8:e.link_m3u8,embed:e.link_embed}))}))}}},
+ ng:{name:'NguonC',
+  list:(t,p)=>t==='new'?`https://phim.nguonc.com/api/films/phim-moi-cap-nhat?page=${p}`:`https://phim.nguonc.com/api/films/danh-sach/${t}?page=${p}`,
+  search:(k,p)=>`https://phim.nguonc.com/api/films/search?keyword=${encodeURIComponent(k)}&page=${p}`,
+  detail:s=>`https://phim.nguonc.com/api/film/${s}`,
+  items(r){return(r.items||[]).map(m=>({slug:m.slug,name:m.name,sub:m.current_episode||'',ep:m.current_episode||'',q:m.quality||'',lang:m.language||'',img:abs(m.thumb_url||m.poster_url,'https://phim.nguonc.com/')}))},
+  det(r){const m=r.movie||{};return{name:m.name,origin:m.original_name,desc:strip(m.description),img:abs(m.poster_url||m.thumb_url,'https://phim.nguonc.com/'),tags:[m.quality,m.language,m.current_episode,m.time].filter(Boolean),servers:(m.episodes||[]).map(s=>({name:s.server_name,eps:(s.items||[]).map(e=>({n:e.name,m3u8:e.m3u8,embed:e.embed}))}))}}},
+ vs:{name:'VSMov',
+  list:(t,p)=>t==='new'?`https://vsmov.com/api/danh-sach/phim-moi-cap-nhat?page=${p}`:`https://vsmov.com/api/danh-sach/${t}?page=${p}`,
+  search:(k,p)=>`https://vsmov.com/api/tim-kiem?keyword=${encodeURIComponent(k)}&page=${p}`,
+  detail:s=>`https://vsmov.com/api/phim/${s}`,
+  items(r){const d=r.data||r;const base=r.pathImage||d.pathImage||'https://img.vsmov.com/';return(d.items||[]).map(m=>({slug:m.slug,name:m.name,sub:m.episode_current||m.year||'',ep:m.episode_current||'',q:m.quality||'',lang:m.lang||'',img:abs(m.thumb_url||m.poster_url,base)}))},
+  det(r){const m=r.movie||{};return{name:m.name,origin:m.origin_name,desc:strip(m.content),img:abs(m.poster_url||m.thumb_url,'https://img.vsmov.com/'),tags:[m.year,m.quality,m.lang,m.episode_current,m.time].filter(Boolean),servers:(r.episodes||[]).map(s=>({name:s.server_name,eps:(s.server_data||[]).map(e=>({n:e.name,m3u8:e.link_m3u8,embed:e.link_embed}))}))}}}
+};
+const TITLES={new:'Mới cập nhật','phim-bo':'Phim bộ','phim-le':'Phim lẻ'};
+const GENRES=[['hanh-dong','Hành động'],['tinh-cam','Tình cảm'],['hai-huoc','Hài hước'],['co-trang','Cổ trang'],['tam-ly','Tâm lý'],['hinh-su','Hình sự'],['chien-tranh','Chiến tranh'],['the-thao','Thể thao'],['vo-thuat','Võ thuật'],['vien-tuong','Viễn tưởng'],['phieu-luu','Phiêu lưu'],['kinh-di','Kinh dị'],['am-nhac','Âm nhạc'],['than-thoai','Thần thoại'],['tai-lieu','Tài liệu'],['gia-dinh','Gia đình'],['chinh-kich','Chính kịch'],['bi-an','Bí ẩn'],['hoc-duong','Học đường'],['khoa-hoc','Khoa học']];
+SRC.kk.alt=u=>u.replace('phim-moi-cap-nhat-v3','phim-moi-cap-nhat');
+SRC.kk.country=(c,p)=>`https://phimapi.com/v1/api/quoc-gia/${c}?page=${p}&limit=24`;
+SRC.ng.country=(c,p)=>`https://phim.nguonc.com/api/films/quoc-gia/${c}?page=${p}`;
+SRC.vs.country=(c,p)=>`https://vsmov.com/api/quoc-gia/${c}?page=${p}`;
+const ROWS=[{id:'new',t:'Phim mới nhất',type:'new'},{id:'sap',t:'Phim sắp ra mắt',type:'phim-sap-chieu'},{id:'ah',t:'Phim hoạt hình',type:'hoat-hinh'},{id:'nb',t:'Phim Nhật Bản',country:'nhat-ban'},{id:'hq',t:'Phim Hàn Quốc',country:'han-quoc'},{id:'tq',t:'Phim Trung Quốc',country:'trung-quoc'},{id:'am',t:'Phim Âu Mỹ',country:'au-my'},{id:'vn',t:'Phim Việt Nam',country:'viet-nam'}];
+SRC.kk.genre=(g,p)=>`https://phimapi.com/v1/api/the-loai/${g}?page=${p}&limit=24`;
+SRC.ng.genre=(g,p)=>`https://phim.nguonc.com/api/films/the-loai/${g}?page=${p}`;
+SRC.vs.genre=(g,p)=>`https://vsmov.com/api/the-loai/${g}?page=${p}`;
+
+let S={src:localStorage.getItem('src')||'kk',cat:'home',genre:'',country:'',tok:0,gname:'Trang chủ',page:1,kw:'',busy:false,hls:null};
+const get=async u=>{const r=await fetch(u);if(!r.ok)throw new Error(r.status);return r.json()};
+function toast(t){const e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display='none',2800)}
+
+/* ---------- UI chips ---------- */
+function drawChips(){
+  $('#meSrc').innerHTML=Object.entries(SRC).map(([k,v])=>`<button class="chip ${k===S.src?'on':''}" data-k="${k}">${v.name}</button>`).join('');
+}
+$('#meSrc').onclick=e=>{const k=e.target.dataset.k;if(!k||k===S.src)return;S.src=k;localStorage.setItem('src',k);toast('Đã chuyển sang '+SRC[k].name);reload()};
+
+/* ---------- danh sách ---------- */
+const cardHTML=(m,src)=>{const ep=m.ep||m.sub||'';return `<div class="card" data-s="${esc(m.slug)}" data-src="${src}"><img loading="lazy" referrerpolicy="no-referrer" src="${esc(m.img)}" alt="" onerror="this.style.opacity=.15">${m.q?`<span class="bd q">${esc(m.q)}</span>`:''}${m.lang?`<span class="bd l">${esc(m.lang)}</span>`:''}<div class="cap"><b>${esc(m.name)}</b><small>${esc(ep)}</small></div></div>`};
+async function fetchItems(A,u){let it=[],err=null;
+  for(const x of [u,A.alt?A.alt(u):u].filter((v,i,a)=>a.indexOf(v)===i)){try{it=A.items(await get(x));if(it.length)return it}catch(e){err=e}}
+  if(err&&!it.length)throw err;return it}
+async function reload(){
+  S.page=1;S.tok++;S.busy=false;drawChips();
+  const home=!S.kw&&!S.genre&&!S.country&&S.cat==='home';
+  $('#v-home').classList.toggle('sm',home);
+  if(home)return loadShelves();
+  $('#grid').innerHTML=Array(6).fill('<div class="card sk"></div>').join('');$('#more').style.display='none';
+  $('#title').textContent=S.kw?`Kết quả: “${S.kw}”`:S.gname;await load(false)}
+const shelfHTML=(r,it)=>`<div class="sh"><h2 class="shh">${r.t}<button class="more2" data-r="${r.id}">Xem tất cả</button></h2><div class="rail">${it.slice(0,14).map(m=>cardHTML(m,S.src)).join('')}</div></div>`;
+const featHTML=(m,src)=>`<div class="card fcard" data-s="${esc(m.slug)}" data-src="${src}"><img referrerpolicy="no-referrer" src="${esc(m.img)}" alt="" onerror="this.style.opacity=.15">${m.q?`<span class="bd q">${esc(m.q)}</span>`:''}${m.lang?`<span class="bd l">${esc(m.lang)}</span>`:''}<div class="cap"><b>${esc(m.name)}</b><small>${esc(m.ep||m.sub||'')}</small></div></div>`;
+let fxT;
+function fxFeat(){const r=$('#frail');if(!r)return;const c=r.getBoundingClientRect(),mid=c.left+c.width/2;
+  r.querySelectorAll('.fcard').forEach(el=>{const b=el.getBoundingClientRect(),d=Math.min(Math.abs(b.left+b.width/2-mid)/b.width,1);el.style.transform=`scale(${1-d*.1})`;el.style.opacity=1-d*.35})}
+function renderFeat(it){const f=$('#frail');if(!f)return;
+  f.innerHTML=it.slice(0,8).map(m=>featHTML(m,S.src)).join('');
+  f.onscroll=()=>{cancelAnimationFrame(fxT);fxT=requestAnimationFrame(fxFeat)};fxFeat()}
+async function loadShelves(){
+  const A=SRC[S.src],tok=S.tok;let ok=0;
+  $('#shelves').innerHTML=`<div class="sh" id="feat"><h2 class="shh">Phim nổi bật</h2><div class="frail" id="frail">${'<div class="card fcard sk"></div>'.repeat(3)}</div></div>`+ROWS.map(r=>`<div class="sh" id="sh-${r.id}"><h2 class="shh">${r.t}</h2><div class="rail">${'<div class="card sk"></div>'.repeat(4)}</div></div>`).join('');
+  await Promise.all(ROWS.map(async r=>{
+    let it=[];
+    try{
+      it=await fetchItems(A,r.country?A.country(r.country,1):A.list(r.type,1));
+      if(!it.length&&r.id==='sap')it=(await fetchItems(A,A.list('new',1))).filter(m=>/trailer|sắp/i.test(m.ep||''));
+    }catch(e){}
+    if(tok!==S.tok)return;
+    const el=$('#sh-'+r.id);if(!el)return;
+    if(r.id==='new'){if(it.length)renderFeat(it);else $('#feat')?.remove()}
+    if(it.length){ok++;el.outerHTML=shelfHTML(r,r.id==='new'&&it.length>12?it.slice(8):it)}else el.remove();
+  }));
+  if(tok===S.tok&&!ok)$('#shelves').innerHTML=`<div class="msg">Không tải được từ ${A.name}.<br>Vào tab Cá nhân để đổi nguồn khác.</div>`}
+document.addEventListener('click',e=>{const b=e.target.closest('.more2');if(!b)return;const r=ROWS.find(x=>x.id===b.dataset.r);
+  S.kw='';S.genre='';S.country=r.country||'';S.cat=r.type||'x';S.gname=r.t;reload();scrollTo({top:0})});
+async function load(append){
+  if(S.busy)return;S.busy=true;const A=SRC[S.src],tok=S.tok;
+  try{
+    const url=S.kw?A.search(S.kw,S.page):S.genre?A.genre(S.genre,S.page):S.country?A.country(S.country,S.page):A.list(S.cat,S.page);
+    const it=await fetchItems(A,url);
+    if(tok!==S.tok)return;
+    const html=it.map(m=>cardHTML(m,S.src)).join('');
+    $('#grid').innerHTML=append?$('#grid').innerHTML+html:(html||'<div class="msg" style="grid-column:1/-1">Không có phim nào.</div>');
+    $('#more').style.display=it.length>=10?'block':'none';
+  }catch(e){
+    if(tok!==S.tok)return;
+    if(!append)$('#grid').innerHTML=`<div class="msg" style="grid-column:1/-1">Không tải được từ ${A.name}.<br>Thử đổi nguồn khác trong tab Cá nhân.</div>`;
+    toast(`${A.name}: lỗi tải dữ liệu`);
+  }finally{S.busy=false}}
+$('#more').onclick=()=>{S.page++;load(true)};
+function search(){const k=$('#q').value.trim();if(!k)return;S.kw=k;S.genre='';S.country='';
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('on'));
+  ['genre','me'].forEach(v=>$('#v-'+v).classList.remove('on'));$('#v-home').classList.add('on');reload()}
+const bar=$('.bar');
+$('#go').onclick=()=>{if(!bar.classList.contains('open')){bar.classList.add('open');$('#q').focus();return}if($('#q').value.trim())search();else bar.classList.remove('open')};
+$('#q').onkeydown=e=>{if(e.key==='Enter')search()};
+$('#q').onblur=()=>setTimeout(()=>{if(!$('#q').value.trim())bar.classList.remove('open')},150);
+
+/* ---------- tab ---------- */
+function show(t){
+  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));
+  const v=(t==='bo'||t==='le')?'home':t;
+  ['home','genre','me'].forEach(x=>$('#v-'+x).classList.toggle('on',v===x));
+  if(t==='me')return drawMe();
+  if(t==='genre')return drawGenres();
+  S.kw='';S.genre='';S.country='';$('#q').value='';S.cat=t==='bo'?'phim-bo':t==='le'?'phim-le':'home';S.gname=t==='bo'?'Phim bộ':t==='le'?'Phim lẻ':'Trang chủ';reload();
+}
+function drawGenres(){$('#gg').innerHTML=GENRES.map(([k,v])=>`<button class="gtile glass" data-g="${k}">${v}</button>`).join('')}
+$('#gg').onclick=e=>{const g=e.target.closest('[data-g]');if(!g)return;S.genre=g.dataset.g;S.country='';S.gname=g.textContent;S.kw='';$('#q').value='';$('#v-genre').classList.remove('on');$('#v-home').classList.add('on');reload()};
+document.querySelector('nav').onclick=e=>{const b=e.target.closest('button');if(b)show(b.dataset.t)};
+
+/* ---------- lịch sử ---------- */
+const H=()=>{try{return JSON.parse(localStorage.getItem('hist')||'[]')}catch{return[]}};
+function saveHist(m,src){const h=H().filter(x=>!(x.slug===m.slug&&x.src===src));h.unshift({slug:m.slug,src,name:m.name,img:m.img,sub:SRC[src].name});try{localStorage.setItem('hist',JSON.stringify(h.slice(0,30)))}catch{}autoBk()}
+const FV=()=>{try{return JSON.parse(localStorage.getItem('fav')||'[]')}catch{return[]}};
+function toggleFav(m,src){const f=FV();const i=f.findIndex(x=>x.slug===m.slug&&x.src===src);if(i>=0)f.splice(i,1);else f.unshift({slug:m.slug,src,name:m.name,img:m.img,sub:SRC[src].name});try{localStorage.setItem('fav',JSON.stringify(f))}catch{}autoBk()}
+const LS={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch{return false}}};
+const cur=()=>localStorage.getItem('cur')||'';
+async function hashPw(salt,pw){const t=salt+':'+pw;try{if(window.crypto&&crypto.subtle){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}}catch{}let h=5381;for(const c of t)h=((h<<5)+h+c.charCodeAt(0))|0;return'f'+h}
+const snap=()=>({v:1,t:Date.now(),fav:FV(),hist:H(),src:S.src});
+const merge=(a,b)=>{const o=[...a];for(const x of b||[])if(!o.some(y=>y.slug===x.slug&&y.src===x.src))o.push(x);return o};
+const apply=d=>{LS.set('fav',merge(FV(),d.fav));LS.set('hist',merge(H(),d.hist).slice(0,30))};
+const backup=()=>{const u=cur();return u?LS.set('bk:'+u,snap()):false};
+let bt;function autoBk(){if(!cur())return;clearTimeout(bt);bt=setTimeout(backup,500)}
+
+function drawMe(){drawInst();
+  const u=cur(),b=u&&LS.get('bk:'+u,null),f=FV(),h=H();
+  $('#acc').innerHTML=u?`<b>Xin chào, ${esc(u)}</b><p>${b?'Sao lưu gần nhất: '+new Date(b.t).toLocaleString('vi-VN'):'Chưa có bản sao lưu.'}</p><div class="row"><button class="btn pri" data-a="bk">Sao lưu ngay</button><button class="btn" data-a="rs">Khôi phục</button><button class="btn" data-a="ex">Xuất file</button><button class="btn" data-a="im">Nhập file</button><button class="btn" data-a="out">Đăng xuất</button></div>`
+   :`<b>Tài khoản</b><p>Đăng nhập để sao lưu danh sách yêu thích và lịch sử xem.</p><div class="row"><button class="btn pri" data-a="in">Đăng nhập</button><button class="btn" data-a="up">Đăng ký</button></div>`;
+  $('#fgrid').innerHTML=f.length?f.map(m=>cardHTML(m,m.src)).join(''):'<div class="msg" style="grid-column:1/-1">Chưa có phim yêu thích. Bấm ♡ trong trang phim để lưu.</div>';
+  $('#hgrid').innerHTML=h.length?h.map(m=>cardHTML(m,m.src)).join(''):'<div class="msg" style="grid-column:1/-1">Chưa xem phim nào.</div>'}
+
+$('#acc').onclick=e=>{const a=e.target.dataset.a;if(!a)return;
+  if(a==='in'||a==='up'){am=a;setM();$('#auth').classList.add('on');return}
+  if(a==='bk'){backup();toast('Đã sao lưu');return drawMe()}
+  if(a==='rs'){const b=LS.get('bk:'+cur(),null);if(!b)return toast('Chưa có bản sao lưu');apply(b);toast('Đã khôi phục');return drawMe()}
+  if(a==='ex'){const l=document.createElement('a');l.href=URL.createObjectURL(new Blob([JSON.stringify(snap())],{type:'application/json'}));l.download=`phimflix-${cur()}.json`;l.click();setTimeout(()=>URL.revokeObjectURL(l.href),2000);return}
+  if(a==='im')return $('#imp').click();
+  if(a==='out'){backup();localStorage.removeItem('cur');toast('Đã đăng xuất');drawMe()}};
+$('#imp').onchange=async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;
+  try{const d=JSON.parse(await f.text());if(!d||(!Array.isArray(d.fav)&&!Array.isArray(d.hist)))throw 0;apply(d);backup();toast('Đã nhập dữ liệu');drawMe()}catch{toast('File sao lưu không hợp lệ')}};
+
+let am='in';
+function setM(){document.querySelectorAll('#auth [data-m]').forEach(b=>b.classList.toggle('on',b.dataset.m===am));
+  $('#ap2').style.display=am==='up'?'block':'none';$('#asub').textContent=am==='up'?'Tạo tài khoản':'Đăng nhập';$('#aerr').textContent=''}
+$('#auth').onclick=e=>{if(e.target.id==='auth'||e.target.id==='acan')$('#auth').classList.remove('on');const m=e.target.dataset.m;if(m){am=m;setM()}};
+$('#asub').onclick=async()=>{
+  const u=$('#au').value.trim().toLowerCase(),p=$('#ap').value,E=t=>{$('#aerr').textContent=t};
+  if(!/^[a-z0-9_.]{3,20}$/.test(u))return E('Tên đăng nhập 3–20 ký tự: chữ thường, số, _ hoặc .');
+  if(p.length<4)return E('Mật khẩu tối thiểu 4 ký tự.');
+  const U=LS.get('users',{});
+  if(am==='up'){
+    if(U[u])return E('Tên này đã có người dùng.');
+    if(p!==$('#ap2').value)return E('Mật khẩu nhập lại chưa khớp.');
+    const salt=Math.random().toString(36).slice(2);U[u]={salt,h:await hashPw(salt,p)};LS.set('users',U);
+    localStorage.setItem('cur',u);backup();toast('Đã tạo tài khoản và sao lưu');
+  }else{
+    const a=U[u];if(!a||a.h!==await hashPw(a.salt,p))return E('Sai tên đăng nhập hoặc mật khẩu.');
+    localStorage.setItem('cur',u);const b=LS.get('bk:'+u,null);if(b)apply(b);backup();toast('Đã đăng nhập');
+  }
+  $('#auth').classList.remove('on');$('#ap').value=$('#ap2').value='';drawMe()};
+$('#clr').onclick=()=>{localStorage.removeItem('hist');autoBk();drawMe()};
+
+/* ---------- chi tiết + trình phát ---------- */
+document.addEventListener('click',e=>{const c=e.target.closest('.card[data-s]');if(c)openMovie(c.dataset.s,c.dataset.src)});
+async function openMovie(slug,src){
+  const D=$('#detail');D.classList.add('on');document.body.style.overflow='hidden';
+  D.innerHTML='<div class="msg" style="padding-top:140px">Đang tải phim…</div>';
+  try{
+    const d=SRC[src].det(await get(SRC[src].detail(slug)));
+    if(!d.name)throw 0;d.slug=slug;saveHist(d,src);
+    const servers=d.servers.filter(s=>s.eps.length);
+    D.innerHTML=`<div class="hero"><img referrerpolicy="no-referrer" src="${esc(d.img)}" alt=""></div>
+    <div class="glass info"><h1>${esc(d.name)}</h1><div class="o">${esc(d.origin)}</div>
+    <div class="tags">${d.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>
+    <button class="btn" id="fav" style="margin-bottom:10px">♡ Yêu thích</button>
+    <div class="desc" id="desc">${esc(d.desc)||'Chưa có mô tả.'}</div></div>
+    <div class="glass player"><div class="box" id="box">Chọn tập để xem</div>
+    <div class="ptools"><button class="btn on" id="mHls">Player HLS</button><button class="btn" id="mEmb">Player nhúng</button></div></div>
+    <h2>Chọn tập</h2><div class="srv" id="srv"></div><div class="eps" id="eps"></div>`;
+    $('#desc').onclick=e=>e.currentTarget.classList.toggle('open');
+    const fb=$('#fav'),isF=()=>FV().some(x=>x.slug===slug&&x.src===src),paint=()=>fb.textContent=isF()?'♥ Đã thích':'♡ Yêu thích';
+    paint();fb.onclick=()=>{toggleFav(d,src);paint()};
+    if(!servers.length){$('#eps').innerHTML='<div class="msg" style="grid-column:1/-1">Phim này chưa có tập nào ở nguồn này.</div>';return}
+    let si=0,ei=0,mode='hls';
+    const play=()=>{
+      const ep=servers[si].eps[ei],box=$('#box');
+      if(S.hls){S.hls.destroy();S.hls=null}
+      const useEmbed=mode==='emb'||!ep.m3u8;
+      $('#mHls').classList.toggle('on',!useEmbed);$('#mEmb').classList.toggle('on',useEmbed);
+      if(useEmbed){if(!ep.embed){box.textContent='Tập này không có link phát.';return}box.innerHTML=`<iframe src="${esc(ep.embed)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe>`;return}
+      box.innerHTML='<video controls playsinline autoplay></video>';const v=box.firstChild;
+      if(v.canPlayType('application/vnd.apple.mpegurl')){v.src=ep.m3u8}
+      else if(window.Hls&&Hls.isSupported()){S.hls=new Hls();S.hls.loadSource(ep.m3u8);S.hls.attachMedia(v);S.hls.on(Hls.Events.ERROR,(_,x)=>{if(x.fatal){toast('HLS lỗi, chuyển sang player nhúng');mode='emb';play()}})}
+      else{mode='emb';play()}
+    };
+    const draw=()=>{
+      $('#srv').innerHTML=servers.map((s,i)=>`<button class="chip ${i===si?'on':''}" data-i="${i}">${esc(s.name)}</button>`).join('');
+      $('#eps').innerHTML=servers[si].eps.map((e,i)=>`<button class="chip ${i===ei?'on':''}" data-i="${i}">${esc(e.n)}</button>`).join('')};
+    $('#srv').onclick=e=>{const i=e.target.dataset.i;if(i==null)return;si=+i;ei=0;draw();play()};
+    $('#eps').onclick=e=>{const i=e.target.dataset.i;if(i==null)return;ei=+i;draw();play();$('#detail').scrollTo({top:0,behavior:'smooth'})};
+    $('#mHls').onclick=()=>{mode='hls';play()};$('#mEmb').onclick=()=>{mode='emb';play()};
+    draw();
+  }catch(e){D.innerHTML='<div class="msg" style="padding-top:140px">Không mở được phim này.<br>Thử nguồn khác.</div>'}
+}
+$('#back').onclick=()=>{if(S.hls){S.hls.destroy();S.hls=null}$('#detail').classList.remove('on');$('#detail').innerHTML='';document.body.style.overflow=''};
+
+let dip;
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();dip=e;drawInst()});
+addEventListener('appinstalled',()=>{dip=null;drawInst()});
+function drawInst(){const el=$('#inst');if(!el)return;
+  const sa=matchMedia('(display-mode: standalone)').matches||navigator.standalone;
+  if(sa){el.style.display='none';return}
+  const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
+  el.style.display='block';
+  el.querySelector('p').textContent=dip?'Cài thành ứng dụng để mở nhanh và xem toàn màn hình.':ios?'Trên iPhone: mở bằng Safari, bấm nút Chia sẻ rồi chọn “Thêm vào Màn hình chính”.':'Mở menu trình duyệt (⋮) rồi chọn “Thêm vào màn hình chính” hoặc “Cài đặt ứng dụng”.';
+  $('#instBtn').style.display=dip?'':'none'}
+$('#instBtn').onclick=async()=>{if(!dip)return;dip.prompt();try{await dip.userChoice}catch{}dip=null;drawInst()};
+if('serviceWorker' in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register('sw.js').catch(()=>{});
+$('.logo').onclick=()=>{show('home');scrollTo({top:0})};
+reload();
+</script>
+</body>
+</html>
